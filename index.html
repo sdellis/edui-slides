@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Javascript Animation</h1>
+					<h3>An EdUI mini-workshop</h3>
+					<p>
+						<small>Created by <a href="http://sdellis.com">Shaun Ellis</a> / <a href="http://twitter.com/sdellis">@sdellis</a></small>
+					</p>
+				</section>
+				<section data-background="img/milky-way-chile-praniski.jpg">
+					<h2>Introduction</h2>
+					<p>
+						The stars have inspired our imaginations since the beginning of time, allowing us to divine meaning out of the seemingly random specks of light that dot the sky.
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2>Abstraction</h2>
+						<p>
+							We need very little visual information before our imaginations start making connections.
+						</p>
+					</section>
+					<section>
+						<h2>What is this?</h2>
+						<img data-src="img/celebration-in-paris-inkblot.png"/>
+						<p class="fragment">
+							<small>Celebration in Paris?</small>
+						</p>
+					</section>
+					<section>
+						<h2>What is this?</h2>
+						<img data-src="img/clothespin-blob.png"/>
+					</section>
+					<section>
+						<h2>A clothespin!</h2>
+						<img data-src="img/clothespin.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+					<h2>Information Visualization</h2>
+					<p>
+						Remove unnecessary information to create focus and avoid distraction from the data story.
+					</p>
+					</section>
+					<section>
+						<h2><a href="http://codepen.io/sdellis/full/zKZYRa">How do we emphasize certain data points to tell our story?</a></h2>
+						<!-- http://codepen.io/sdellis/full/zKZYRa
+						<iframe height='100%' scrolling='no' src='http://codepen.io/sdellis/embed/zKZYRa/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/sdellis/pen/zKZYRa/'>Thriller Night SVG Constellation Animation Paused</a> by Shaun Ellis (<a href='http://codepen.io/sdellis'>@sdellis</a>) on <a href='http://codepen.io'>CodePen</a>.
+						-->
+					</section>
+					<section>
+						<h2>Gunnar Johansson's Experiments</h2>
+						<img height="500px" data-src="img/bio-motion-lab.jpg"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>CodePen as Portfolio</h2>
+						<p>
+							Examples of the state of Web Animation in 2016.
+						</p>
+					</section>
+					<section>
+						<h2><a href="http://codepen.io/collection/naMNgw/">100 Days of N Divs</a></h2>
+						<p>
+							by John Brown (CSS only, with preprocessors)
+						</p>
+					</section>
+					<section>
+						<h2><a href="http://codepen.io/chrisgannon/full/VvEWQE">Vinyl Player</a></h2>
+						<p>
+							by Chris Gannon (Greensock + SoundCloud API)
+						</p>
+					</section>
+					<section>
+						<h2><a href="http://codepen.io/grayghostvisuals/full/RNLgJP">PolyLion</a></h2>
+						<p>
+							by Gray Ghost (Greensock)
+							<a href="https://css-tricks.com/polylion/">CSS-Tricks Article</a>
+						</p>
+					</section>
+					<section>
+						<h2><a href="https://pixijs.github.io/examples/#/demos/batch.js">Particle Container</a></h2>
+						<p>
+							Pixi.JS example (Pixi.js)
+						</p>
+					</section>
+					<section>
+						<h2><a href="https://coldwar.io/coldwar">Cold War Simulator</a></h2>
+						<p>
+							By Simon Swain (Canvas)
+						</p>
+					</section>
+					<section>
+						<h2>Create your own CodePen profile.</h2>
+						<p>
+							Fork <a href="http://codepen.io/sdellis/pen/pEqLVd">this template</a>.
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2>Web Animation Options</h2>
+					<ul>
+						<li class="fragment">GIF</li>
+						<li class="fragment">CSS/SVG</li>
+						<li class="fragment">Canvas (2d/3d)</li>
+						<li class="fragment"><a href="https://youtu.be/z9yOv4EMp1M">Animation Deathmatch</a> by Johnny McLaughlin</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Web Animation Libraries</h2>
+					<ul>
+						<li class="fragment">Paper.js</li>
+						<li class="fragment">Fabric.js</li>
+						<li class="fragment">Pixie.js</li>
+						<li class="fragment">And so on...</li>
+						<li class="fragment">Powerful, but still hard to work with...</li>
+					</ul>
+				</section>
+				<section>
+					<h2>GreenSock Animation Platform (GSAP)</h2>
+					<p><a href="https://www.youtube.com/watch?v=sXJKg8SUSLI">A thirteen-minute tour.</a></p>
+				</section>
+				<section>
+					<h2>New Tools Inspire Innovation</h2>
+					<video width="640" height="164" preload="" autoplay loop>
+						<source src="https://s3.amazonaws.com/worrydream.com/LearnableProgramming/Movies/Abstract4.mp4" type="video/mp4">
+						<source src="https://s3.amazonaws.com/worrydream.com/LearnableProgramming/Movies/Abstract4.webm" type="video/webm">
+					</video>
+					<p><small><a href="http://worrydream.com/LearnableProgramming/">Learnable Programming</a> by Bret Victor</small></p>
+				</section>
+				<section>
+					<h2>How to recreate Johanson's Experiment?</h2>
+					<img class="fragment" height="300px" data-src="img/school-picture.png"/>
+					<p class="fragment">Trace animated GIFs!</p>
+				</section>
+				<section data-background="img/okc-airport.png">
+					<h2>Stuck at the airport?</h2>
+					<h3 class="fragment">Time to Prototype!</h3>
+					<p class="fragment">I came up with <a href="http://sdellis.com/labs/animation-tool/">this prototype</a> <br/> using jQuery and Snap.js.</p>
+					<p class="fragment">I made <a href="http://codepen.io/sdellis/full/xVYMJj">this horse animation</a><br/>… ok, this could work.</p>
+
+				</section>
+				<section>
+					<h2>But there were issues...</h2>
+					<ul>
+						<li class="fragment">No margin for error</li>
+						<li class="fragment">After hours of work, I could only do one thing with this tool, even though pieces of it may be useful</li>
+						<li class="fragment">How to make time for further iterations?</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Composable Interfaces!</h2>
+					<ul>
+						<li class="fragment"><a href="https://viewdir.github.io/">Viewdir</a></li>
+						<li class="fragment"><a href="http://sdellis.com/svg-draw-component/examples/gif.html">svg-draw-component</a></li>
+					</ul>
+				</section>
+				<section>
+					<section data-background="img/close-call.gif">
+						<h2>Hands on Section</h2>
+					</section>
+					<section>
+						<h1>Search for a GIF</h2>
+						<p>Criteria:</p>
+						<ul>
+							<li class="fragment">Biological in nature</li>
+							<li class="fragment">Subject should stay completely within frame at all times</li>
+							<li class="fragment">Well lit subject</li>
+							<li class="fragment">At least 400px on smallest side</li>
+							<li class="fragment">Less than 30 frames (hard to tell, so gather a few possibilities)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Start tracing joints</h2>
+						<p>Two ways to use the interface:</p>
+						<ol>
+							<li class="fragment">Locally: clone <a href="https://github.com/sdellis/svg-draw-component">my repository</a>, npm install/gulp/gulp examples, and add your own gif to one of the example files, or</li>
+							<li class="fragment">On the web: post a link to your GIF(s) and a one-word title in an issue on <a href="https://github.com/sdellis/edui-slides/issues">my GitHub edui-slides repo</a>… then I will clone it and create your page with your GIF.</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Steps</h2>
+						<ol>
+							<li class="fragment">“Trace” your first frame</li>
+							<li class="fragment">Take a snapshot</li>
+							<li class="fragment">“Trace” your next frame… and so on</li>
+							<li class="fragment">Export Code</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Paste into your CodePen template</h2>
+						<p>Tag it as kinetic-constellation, and add it to your showcase.</p>
+					</section>
+					<section>
+						<h2>Freeplay</h2>
+						<p>Ok, now you can tweak the SVG and the Greensock code to experiment with new ideas.</p>
+
+						<p>Try moving the entire image as in <a href="http://codepen.io/sdellis/full/amXoay">this Moonwalk example</a>.</p>
+
+						<p>You can combine animations and build a narrative with two Thriller sequences.</p>
+					</section>
+					<section>
+						<h2>Thank you!</h2>
+						<p>
+							<small><a href="http://sdellis.com">Shaun Ellis</a> / <a href="http://twitter.com/sdellis">@sdellis</a></small>
+						</p>
+					</section>
+
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
