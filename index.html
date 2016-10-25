@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Sophisticated Javascript Animation</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -26,15 +26,18 @@
 			<div class="slides">
 				<section>
 					<h1>Javascript Animation</h1>
-					<h3>An EdUI mini-workshop</h3>
+					<h3>An edUI mini-workshop</h3>
 					<p>
-						<small>Created by <a href="http://sdellis.com">Shaun Ellis</a> / <a href="http://twitter.com/sdellis">@sdellis</a></small>
+						<small><a href="http://sdellis.com">Shaun Ellis</a> / <a href="http://twitter.com/sdellis">@sdellis</a> / <a href="https://twitter.com/search?f=tweets&q=%23edui_Animated&src=typd">#edui_Animated</a></small>
+					</p>
+					<p>
+						<small>Slides: <a href="http://sdellis.com/edui-slides/">http://sdellis.com/edui-slides/</a></small>
 					</p>
 				</section>
-				<section data-background="img/milky-way-chile-praniski.jpg">
+				<section data-background="img/milky-way-small.jpg">
 					<h2>Introduction</h2>
 					<p>
-						The stars have inspired our imaginations since the beginning of time, allowing us to divine meaning out of the seemingly random specks of light that dot the sky.
+						The stars have inspired our imaginations since the beginning of time, allowing us to make meaning out of the seemingly random specks of light that dot the sky.
 					</p>
 				</section>
 				<section>
@@ -53,11 +56,11 @@
 					</section>
 					<section>
 						<h2>What is this?</h2>
-						<img data-src="img/clothespin-blob.png"/>
+						<img data-src="img/clothespin-blob.jpg"/>
 					</section>
 					<section>
 						<h2>A clothespin!</h2>
-						<img data-src="img/clothespin.png"/>
+						<img data-src="img/clothespin.jpg"/>
 					</section>
 				</section>
 				<section>
@@ -129,22 +132,24 @@
 						<li class="fragment">GIF</li>
 						<li class="fragment">CSS/SVG</li>
 						<li class="fragment">Canvas (2d/3d)</li>
-						<li class="fragment"><a href="https://youtu.be/z9yOv4EMp1M">Animation Deathmatch</a> by Johnny McLaughlin</li>
+
 					</ul>
+					<p class="fragment">Check out <a href="https://youtu.be/z9yOv4EMp1M">Animation Deathmatch</a> by Johnny McLaughlin for tips on when each is appropriate.</p>
 				</section>
 				<section>
 					<h2>Web Animation Libraries</h2>
 					<ul>
 						<li class="fragment">Paper.js</li>
 						<li class="fragment">Fabric.js</li>
-						<li class="fragment">Pixie.js</li>
+						<li class="fragment">PixiJS</li>
 						<li class="fragment">And so on...</li>
-						<li class="fragment">Powerful, but still hard to work with...</li>
+						<li class="fragment">Powerful, but still may not be the right tool...</li>
 					</ul>
 				</section>
 				<section>
 					<h2>GreenSock Animation Platform (GSAP)</h2>
-					<p><a href="https://www.youtube.com/watch?v=sXJKg8SUSLI">A thirteen-minute tour.</a></p>
+					<p><a href="http://codepen.io/sdellis/pen/ozVxkk?editors=0010">Play with TimelineLite in CodePen</a></p>
+					<p><a href="https://www.youtube.com/watch?v=sXJKg8SUSLI">Original Source.</a></p>
 				</section>
 				<section>
 					<h2>New Tools Inspire Innovation</h2>
@@ -155,8 +160,8 @@
 					<p><small><a href="http://worrydream.com/LearnableProgramming/">Learnable Programming</a> by Bret Victor</small></p>
 				</section>
 				<section>
-					<h2>How to recreate Johanson's Experiment?</h2>
-					<img class="fragment" height="300px" data-src="img/school-picture.png"/>
+					<h2>How to recreate Johannson's Experiment?</h2>
+					<img class="fragment" height="300px" data-src="img/sugar-high.gif"/>
 					<p class="fragment">Trace animated GIFs!</p>
 				</section>
 				<section data-background="img/okc-airport.png">
@@ -170,7 +175,8 @@
 					<h2>But there were issues...</h2>
 					<ul>
 						<li class="fragment">No margin for error</li>
-						<li class="fragment">After hours of work, I could only do one thing with this tool, even though pieces of it may be useful</li>
+						<li class="fragment">After hours of work, I could only do one thing with this tool,
+							even though pieces of it may be useful elsewhere</li>
 						<li class="fragment">How to make time for further iterations?</li>
 					</ul>
 				</section>
@@ -200,9 +206,18 @@
 						<h2>Start tracing joints</h2>
 						<p>Two ways to use the interface:</p>
 						<ol>
-							<li class="fragment">Locally: clone <a href="https://github.com/sdellis/svg-draw-component">my repository</a>, npm install/gulp/gulp examples, and add your own gif to one of the example files, or</li>
-							<li class="fragment">On the web: post a link to your GIF(s) and a one-word title in an issue on <a href="https://github.com/sdellis/edui-slides/issues">my GitHub edui-slides repo</a>… then I will clone it and create your page with your GIF.</li>
+
+							<li class="fragment">On the web: <a href="http://sdellis.com/svg-draw-component/examples/gifs.html">Choose a GIF</a></li>
+							<li class="fragment">Locally: clone <a href="https://github.com/sdellis/svg-draw-component">my
+								repository</a>... and add your own gif to one of the example files.
+								If you have npm/gulp installed, follow these steps:</li>
 						</ol>
+						<pre class="fragment"><code class="hljs">$ git clone https://github.com/sdellis/svg-draw-component.git
+$ cd svg-draw-component
+$ npm install
+$ gulp
+$ gulp examples
+						</code></pre>
 					</section>
 					<section>
 						<h2>Steps</h2>
@@ -223,13 +238,14 @@
 
 						<p>Try moving the entire image as in <a href="http://codepen.io/sdellis/full/amXoay">this Moonwalk example</a>.</p>
 
-						<p>You can combine animations and build a narrative with two Thriller sequences.</p>
+						<p>You can try combining animations making mythical beasts, narratives, or whatever...</p>
 					</section>
 					<section>
 						<h2>Thank you!</h2>
 						<p>
 							<small><a href="http://sdellis.com">Shaun Ellis</a> / <a href="http://twitter.com/sdellis">@sdellis</a></small>
 						</p>
+						<p><small>Tweet your animations with this hashtag: <a href="https://twitter.com/search?f=tweets&q=%23edui_Animated&src=typd">#edui_Animated</a></small></p>
 					</section>
 
 				</section>
